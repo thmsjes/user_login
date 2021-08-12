@@ -25,3 +25,16 @@
 #title {
   color: rgb(153, 36, 36) !important;
 }
+htlm,
+body {
+  height: 100%;
+}
+#page-content {
+  flex: 1 0 auto;
+}
+#sticky-footer {
+  flex-shrink: none;
+}
+#home-container {
+  margin-top: 25px;
+}
