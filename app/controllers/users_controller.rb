@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
-    @user = User.new(params.require(:user).permit(:username, :password, :email, :admin))
+    @user = User.new(params.require(:user).permit(:username, :password, :email, :admin, :first_name, :last_name))
 
     respond_to do |format|
       if @user.save
@@ -40,7 +40,7 @@ end
   # PATCH/PUT /users/1 or /users/1.json
   def update
     respond_to do |format|
-      if @user.update(user_params)
+      if  @user.update(params.require(:user).permit(:username, :password, :email, :admin, :first_name, :last_name))
         format.html { redirect_to @user, notice: "User was successfully updated." }
         format.json { render :show, status: :ok, location: @user }
       else
