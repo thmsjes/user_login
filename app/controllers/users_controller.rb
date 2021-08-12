@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
-    @user = User.new(user_params)
+    @user = User.new(params.require(:user).permit(:username, :password, :email, :admin))
 
     respond_to do |format|
       if @user.save
@@ -32,6 +32,9 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+def user_params
+  params.require(:user).permit(:username, :password, :email, :admin)
+end
   end
 
   # PATCH/PUT /users/1 or /users/1.json
