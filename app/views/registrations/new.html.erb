@@ -1,0 +1,28 @@
+<div class="container">
+ <h1>New User</h1>
+ <%= form_with scope: :user, url: registrations_path do |form|%>
+  <div class= "mb-3"> 
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control", placeholder: "Email"%>
+  </div>
+   <div class= "mb-3"> 
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class: "form-control", placeholder: "First Name"%>
+  </div>
+  
+  <div class= "mb-3"> 
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class: "form-control", placeholder: "Last Name"%>
+  </div>
+
+  <div class= "mb-3"> 
+    <%= form.label :Password %>
+    <%= form.password_field :password, class: "form-control", placeholder: "Password"%>
+  </div>
+
+  <div class= "mb-3"> 
+    <%= form.submit "Create", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+</div>
