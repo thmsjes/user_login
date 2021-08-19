@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
   # POST /users or /users.json
   def create
-    @user = User.new(params.require(:user).permit(:username, :password, :email, :admin, :first_name, :last_name))
+    @user = User.new(params.require(:user).permit(:username, :password, :email,  :first_name, :last_name))
 
     respond_to do |format|
       if @user.save

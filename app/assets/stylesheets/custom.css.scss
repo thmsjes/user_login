@@ -28,13 +28,18 @@
 htlm,
 body {
   height: 100%;
+  color: darkgray;
+  margin: 0px;
 }
 #page-content {
   flex: 1 0 auto;
+  background-color: lightgrey;
 }
 #sticky-footer {
   flex-shrink: none;
+  padding: 10px;
 }
 #home-container {
-  margin-top: 25px;
+  margin-top: 0px;
+  background-color: lightgrey;
 }
