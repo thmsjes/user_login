@@ -14,4 +14,13 @@ class RegistrationsController < ApplicationController
     @users = User.all
   end
 
+  def edit
+    byebug
+    @registrations = User.find(params[:id])
+  end
+
+  def update
+
+  end
+
 end
