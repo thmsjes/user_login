@@ -43,3 +43,23 @@ body {
   margin-top: 0px;
   background-color: lightgrey;
 }
+
+#navbarSupportedContent {
+  color: white;
+}
+.navbar-collapse {
+  color: white;
+}
+a.nav-link {
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+  background-color: #333;
+}
+#current_user {
+  margin-bottom: 10px;
+}

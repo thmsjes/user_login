@@ -5,24 +5,25 @@ include CurrentUserConcern
       .find_by(email: params["email"])
       .try(:authenticate, params["password"])
       puts user
-      byebug
+     
     if user
       session[:user_id] = user.id
       # render json: {status: :created, logged_in: true, user: user, user: user.id, session: session[:user_id]}
       redirect_to main_path
     else 
-      render json: {status: 401}
+      redirect_to login_path, notice: "Wrong username, email, or password"
     end
   end
 
   def logged_in
-    if @current_user
-      render json: { logged_in: true, user: @current_user}
-    else
-      render json: {
-      logged_in: false }
+    !!current_user
+    # if @current_user
+    #   render json: { logged_in: true, user: @current_user}
+    # else
+    #   render json: {
+    #   logged_in: false }
+    # end
   end
-end
 
   def logout
     reset_session
