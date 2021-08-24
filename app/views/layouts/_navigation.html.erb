@@ -6,20 +6,20 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <%# <li class="nav-item active">
         <a class="nav-link" id="link1" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
+      </li> %>
       
       
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="link1"      href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          More
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Home</a>
+          <a class="dropdown-item" href="#">Support</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Training</a>
           
           
           </li>
@@ -34,11 +34,35 @@
             <%= link_to 'Log in', login_path, class: "nav-link" %>
             </li>
             <% end %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'Status', vehicles_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'Used', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'New', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'Service', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'Dispatch', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'Tech', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'Parts', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1"> 
+              <%= link_to 'Sublet', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'Detail', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'History', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+                <%= link_to 'Reports', new_vehicle_path, class: "nav-link" %>
+            <li class="nav-item" id="link1">
+              <%= link_to 'Admin', registrations_path, class: "nav-link" %>
           </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <%# <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-1" type="submit">Search</button>
+    </form> %>
   </div>
   </div>
 </nav>
