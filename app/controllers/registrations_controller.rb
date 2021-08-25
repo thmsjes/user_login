@@ -9,7 +9,7 @@ class RegistrationsController < ApplicationController
   end
 
   def create
-   
+    byebug
     @user = User.new(params.require(:user).permit(:email, :first_name, :last_name, :password))
     @user.save
     redirect_to registrations_path

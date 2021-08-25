@@ -2,15 +2,14 @@
  <h1>Vehicle to go to Service</h1>
  <%= form_with scope: :vehicle, url: vehicles_path do |form|%>
   <div class= form-row>
-  <div class= "col-mb-3"> 
-    <%= form.label :stock_number%>
-    <%= form.text_field :stock_number, class: "form-control", placeholder: "Stock Number" %>
-  </div> 
-   <div class= "col-mb-3"> 
-    <%= form.label :year %>
-    <%= form.text_field :year, class: "form-control", placeholder: "Year"%>
-   
-  </div>
+    <div class= "col-mb-3"> 
+      <%= form.label :stock_number%>
+      <%= form.text_field :stock_number, class: "form-control", placeholder: "Stock Number" %>
+    </div> 
+    <div class= "col-mb-3"> 
+      <%= form.label :year %>
+      <%= form.text_field :year, class: "form-control", placeholder: "Year"%>
+    </div>
    <div class= "col-mb-3"> 
     <%= form.label :make %>
     <%= form.text_field :make, class: "form-control", placeholder: "Make"%>

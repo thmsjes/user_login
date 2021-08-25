@@ -1,30 +1,99 @@
 <div class="container">
- <h1>New User</h1>
- <%= form_with scope: :user, url: registrations_path do |form|%>
-  <div class= "mb-3"> 
-    <%= form.label :email %>
-    <%= form.text_field :email, class: "form-control", placeholder: "Email"%>
+  <h1>New User</h1>
+  <%= form_with scope: :user, url: registrations_path do |form|%>
+    <div class= "mb-3"> 
+      <%= form.label :email %>
+      <%= form.text_field :email, class: "form-control", placeholder: "Email"%>
+    </div>
+    <div class= "mb-3"> 
+      <%= form.label :first_name %>
+      <%= form.text_field :first_name, class: "form-control", placeholder: "First Name"%>
+    </div>
+    <div class= "mb-3"> 
+      <%= form.label :last_name %>
+      <%= form.text_field :last_name, class: "form-control", placeholder: "Last Name"%>
+    </div>
+    <div class= "mb-3"> 
+      <%= form.label :Password %>
+      <%= form.password_field :password, class: "form-control", placeholder: "Password"%>
+    </div>
+    <div id="access">
+    <%= form.label :"Access:" %>
+    </div>
+  <div class="form-row">
+    <div class= "col-mb-3">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="used_access">Used   </label>
+      </div>
+    </div>
+    <div class="form-check form-switch">
+      <div class= "col-mb-3">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="new_access">New</label>
+      </div>
+    </div>
   </div>
-   <div class= "mb-3"> 
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name, class: "form-control", placeholder: "First Name"%>
+  <div class="form-row">
+    <div class= "col-mb-3">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="advisor_access">Advisor</label>
+      </div>
+    </div>
+    <div class="form-check form-switch">
+      <div class= "col-mb-3">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="dispatch_access">Dispatch</label>
+      </div>
+    </div>
+      <div class= "col-mb-3">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox">
+          <label class="form-check-label" for="tech_access">Tech</label>
+        </div>
+      </div>
+    <div class="form-check form-switch">
+      <div class= "col-mb-3">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="service_access">Service</label>
+      </div>
+    </div>
   </div>
-  
-  <div class= "mb-3"> 
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name, class: "form-control", placeholder: "Last Name"%>
+    <div class="form-row">
+    <div class= "col-mb-3">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="sublet_access">Sublet</label>
+      </div>
+    </div>
+      <div class="form-check form-switch">
+        <div class= "col-mb-3">
+          <input class="form-check-input" type="checkbox">
+          <label class="form-check-label" for="detail_access">Detail</label>
+        </div>
+      </div>
+    </div>
+      <div class="form-row">
+    <div class= "col-mb-3">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="report_access">Reports</label>
+      </div>
+    </div>
+    <div class="form-check form-switch">
+      <div class= "col-mb-3">
+        <input class="form-check-input" type="checkbox">
+        <label class="form-check-label" for="admin_access">Admin</label>
+      </div>
+    </div>
   </div>
-
-  <div class= "mb-3"> 
-    <%= form.label :Password %>
-    <%= form.password_field :password, class: "form-control", placeholder: "Password"%>
-  </div>
-
-  <div class= "mb-3"> 
-    <%= form.submit "Create", class: "btn btn-primary" %>
-  
-  <%= link_to 'Back', registrations_path,  class: "btn btn-success" %>
-<% end %>
-  </div>
-
+  <br>
+    <div class="form-row">
+      <div class= "mb-1"> 
+        <%= form.submit "Create", class: "btn btn-primary" %>
+        <%= link_to 'Back', registrations_path,  class: "btn btn-success" %>
+        <% end %>
+      </div>
+    </div>
 </div>
