@@ -1,6 +1,6 @@
 <div class="container">
- <h1>Vehicle to go to Service</h1>
- <%= form_with scope: :vehicle, url: vehicles_path do |form|%>
+ <h1>Edit Vehicle Information</h1>
+ <%= form_with(model: @vehicle, local: true) do |form|%>
   <div class= form-row>
   <div class= "col-mb-3"> 
     <%= form.label :stock_number%>
@@ -46,10 +46,10 @@
   <div class= "mb-3"> 
     <%= form.label :notes %>
     <%= form.text_area :notes, class: "form-control", placeholder: "Notes" %> 
-    <%= form.hidden_field :created_by, value: set_current_user.email %>
-    <%= form.hidden_field :status, value: "Waiting on RO" %> 
+     <%= form.hidden_field :updated_by, value: set_current_user.email %>
+    <%# <%= form.hidden_field :status, value: "Waiting on RO" %> 
     <br>
-    <%= form.submit "Create", class: "btn btn-primary" %>
+    <%= form.submit "Save", class: "btn btn-primary" %>
   <%= link_to 'Back', vehicles_path,  class: "btn btn-success" %>
 <% end %>
   </div>

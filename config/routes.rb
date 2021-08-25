@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :sessions, only: [:create]
-  resources :registrations, only: [:create, :index, :new, :edit, :update ]
+  resources :registrations, only: [:show, :create, :index, :new, :edit, :update ]
   resources :users
-  resources :vehicles, only: [:show, :index, :new, :create, :destroy]
+  resources :vehicles, only: [:index, :new, :create, :destroy, :edit, :update]
   get :logout, to: "sessions#logout"
   get :logged_in, to:"sessions#logged_in"
   root 'pages#home'

@@ -8,6 +8,7 @@
           <th scope="col">Make</th>
           <th scope="col">Model</th>
           <th scope="col">Mileage</th>
+          <th scope="col">Type</th>
           <th scope="col">Status</th>
           <th scope="col">Time</th>
           <th colspan="2">Action</th>
@@ -22,12 +23,13 @@
         <td scope="row"><%= vehicle.make %></td>
         <td scope="row"><%= vehicle.model %></td>
         <td scope="row"><%= vehicle.mileage %></td>
+        <td scope="row"><%= vehicle.kind %></td>
         <td scope="row"><%= vehicle.status %></td>
         <% days = (Time.now - vehicle.created_at)/86400 %> 
         <td scope="row"><%= number_with_precision(days, precision: 2) %>
         <td>
-        <%= link_to 'Edit', new_vehicle_path(vehicle), class: "btn btn-warning" %>
-        <%= link_to 'Delete', new_vehicle_path(vehicle), method: :delete, class: "btn btn-danger" %></td>
+        <%= link_to 'Edit', edit_vehicle_path(vehicle), class: "btn btn-warning" %>
+        <%= link_to 'Delete', vehicle_path(vehicle), method: :delete, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
